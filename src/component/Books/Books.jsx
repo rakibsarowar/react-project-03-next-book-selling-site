@@ -15,8 +15,14 @@ const Books = () => {
 
 
     return (
-        <div>
-            <h1>Hollow from Books</h1>
+        <div className='my-container'>
+            <div className="grid gap-6 mb-8 lg:grid-cols-4 sm: grid-cols-2">
+                {books.map(book=>
+                <div className='overflow-hidden'>
+                    <img src={book.image} alt="book cover" className='object-cover' />
+                </div>
+                )}
+            </div>
         </div>
     );
 };
